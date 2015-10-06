@@ -2,7 +2,7 @@ def prompt(msg)
   puts ">>  #{msg}"
 end
 
-puts
+puts1
 prompt "Who should start, (h)uman or (c)omputer?"
 answer = gets.chomp.downcase
 if answer == 'h'
@@ -173,8 +173,6 @@ loop do
     place_peice!(board, current_player)
     current_player = alternate_player(current_player)
     break if winner?(board) || board_full?(board)
-    # computer_move!(board)
-    # break if winner?(board) || board_full?(board)
   end
 
   display_board(board)
